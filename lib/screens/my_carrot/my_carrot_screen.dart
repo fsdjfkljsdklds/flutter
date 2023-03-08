@@ -1,6 +1,6 @@
 import 'package:carrot_market_ui/models/icon_menu.dart';
-import 'package:carrot_market_ui/screens/home/components/card_icon_menu.dart';
-import 'package:carrot_market_ui/screens/home/components/my_carrot_header.dart';
+import 'package:carrot_market_ui/screens/my_carrot/components/card_icon_menu.dart';
+import 'package:carrot_market_ui/screens/my_carrot/components/my_carrot_header.dart';
 import 'package:flutter/material.dart';
 
 class MyCarrotScreen extends StatelessWidget {
