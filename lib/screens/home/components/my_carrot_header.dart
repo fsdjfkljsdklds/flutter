@@ -43,23 +43,25 @@ Widget _buildProfileRow() {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(32.5),
               child: Image.network(
-                'https://placeimg.com/200/100/people', fit: BoxFit.cover,
+                'https://placeimg.com/200/100/people',
+                fit: BoxFit.cover,
               ),
             ),
           ),
-          Positioned(bottom: 0,
-          right: 0,
-          child: Container(
-            width: 20,
-            height: 20,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15),
-              color: Colors.grey[100]),
-            child: Icon(
-              Icons.camera_outlined,
-              size: 15,
+          Positioned(
+            bottom: 0,
+            right: 0,
+            child: Container(
+              width: 20,
+              height: 20,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  color: Colors.grey[100]),
+              child: Icon(
+                Icons.camera_outlined,
+                size: 15,
+              ),
             ),
-          ),
           ),
         ],
       ),
@@ -75,10 +77,46 @@ Widget _buildProfileRow() {
     ],
   );
 }
+
 Widget _buildProfileButton() {
-  return Container(color: Colors.blue[100], height: 45);
+  return InkWell(
+    onTap: () {},
+    child: Container(
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: Color(0xFFD4D5DD),
+          width: 1.0,
+        ),
+        borderRadius: BorderRadius.circular(6.0),
+      ),
+      height: 45,
+      child: Center(
+        child: Text(
+          '프로필기록 보기',
+          style: textTheme().subtitle1,
+        ),
+      ),
+    ),
+  );
 }
 
 Widget _buildRoundTextButton(String title, IconData iconData) {
-  return Container(color: Colors.orange[100], height: 60);
+  return Column(
+    children: [
+      Container(
+        width: 60,
+        height: 60,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(30.0),
+            color: Color.fromRGBO(255, 226, 208, 1),
+            border: Border.all(color: Color(0xFFD4D5DD), width: 0.5)),
+        child: Icon(iconData, color: Colors.orange),
+      ),
+      SizedBox(height: 10),
+      Text(
+        title,
+        style: textTheme().subtitle1,
+      )
+    ],
+  );
 }
